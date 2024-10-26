@@ -1,4 +1,4 @@
-package org.openjfx;
+package com.example.app;
 
 import javafx.stage.Stage;
 import javafx.scene.Scene;

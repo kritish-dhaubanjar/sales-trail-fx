@@ -1,5 +1,5 @@
-module org.openjfx {
+module com.example.app {
   requires javafx.controls;
 
-  exports org.openjfx;
+  exports com.example.app;
 }

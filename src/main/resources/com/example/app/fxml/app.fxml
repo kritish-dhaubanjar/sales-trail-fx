@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1024.0"
+  prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: #fff;"
+  stylesheets="@../css/global.css" xmlns="http://javafx.com/javafx/23.0.1"
+  xmlns:fx="http://javafx.com/fxml/1">
+  <left>
+    <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <children>
+        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+          <children>
+            <HBox prefWidth="200.0">
+              <children>
+                <Button maxWidth="Infinity" mnemonicParsing="false" HBox.hgrow="ALWAYS">
+                  <graphic>
+                    <HBox alignment="CENTER_LEFT">
+                      <children>
+                        <SVGPath
+                          content="M 15.05 1.4 h -13.3 a 0.35 0.35 90 0 0 -0.35 0.35 v 13.3 a 0.35 0.35 90 0 0 0.35 0.35 h 4.9 a 0.35 0.35 90 0 0 0.35 -0.35 V 7 h 8.05 a 0.35 0.35 90 0 0 0.35 -0.35 v -4.9 a 0.35 0.35 90 0 0 -0.35 -0.35 z M 14.7 6.3 h -2.45 V 4.55 a 0.35 0.35 90 0 0 -0.7 0 V 6.3 h -2.1 V 4.55 a 0.35 0.35 90 0 0 -0.7 0 V 6.3 H 7 V 4.55 a 0.35 0.35 90 0 0 -0.7 0 V 6.3 H 4.55 a 0.35 0.35 90 0 0 0 0.7 H 6.3 v 1.75 H 4.55 a 0.35 0.35 90 0 0 0 0.7 H 6.3 v 2.1 H 4.55 a 0.35 0.35 90 0 0 0 0.7 H 6.3 V 14.7 H 2.1 V 2.1 h 12.6 v 4.2 z">
+                          <HBox.margin>
+                            <Insets right="8.0" />
+                          </HBox.margin>
+                        </SVGPath>
+                        <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0"
+                          styleClass="font-medium" text="Units"> </Text>
+                      </children>
+                    </HBox>
+                  </graphic>
+                  <padding>
+                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                  </padding>
+                  <cursor>
+                    <Cursor fx:constant="HAND" />
+                  </cursor>
+                </Button>
+              </children>
+              <VBox.margin>
+                <Insets bottom="8.0" />
+              </VBox.margin>
+            </HBox>
+            <HBox prefWidth="200.0">
+              <children>
+                <Button maxWidth="Infinity" mnemonicParsing="false" HBox.hgrow="ALWAYS">
+                  <graphic>
+                    <HBox alignment="CENTER_LEFT">
+                      <children>
+                        <SVGPath
+                          content="M 2.065 0.28 a 0.7 0.7 90 0 1 0.56 -0.28 h 5.95 a 0.7 0.7 90 0 1 0.56 0.28 l 1.995 2.66 a 0.35 0.35 90 0 1 0.07 0.21 V 10.5 a 0.7 0.7 90 0 1 -0.7 0.7 H 0.7 a 0.7 0.7 90 0 1 -0.7 -0.7 V 3.15 a 0.35 0.35 90 0 1 0.07 -0.21 L 2.065 0.28 z M 5.25 0.7 H 2.625 L 1.05 2.8 h 4.2 V 0.7 z m 0.7 0 v 2.1 h 4.2 l -1.575 -2.1 H 5.95 z M 10.5 3.5 H 0.7 v 7 h 9.8 V 3.5 z">
+                          <HBox.margin>
+                            <Insets right="8.0" />
+                          </HBox.margin>
+                        </SVGPath>
+                        <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0"
+                          styleClass="font-medium" text="Items" />
+                      </children>
+                    </HBox>
+                  </graphic>
+                  <padding>
+                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                  </padding>
+                  <cursor>
+                    <Cursor fx:constant="HAND" />
+                  </cursor>
+                </Button>
+              </children>
+              <VBox.margin>
+                <Insets bottom="8.0" />
+              </VBox.margin>
+            </HBox>
+            <HBox prefWidth="200.0">
+              <children>
+                <Button maxWidth="Infinity" mnemonicParsing="false" HBox.hgrow="ALWAYS">
+                  <graphic>
+                    <HBox>
+                      <children>
+                        <SVGPath
+                          content="M 12.6 4.05 V 12.6 a 1.8 1.8 90 0 1 -1.8 1.8 H 3.6 a 1.8 1.8 90 0 1 -1.8 -1.8 V 1.8 a 1.8 1.8 90 0 1 1.8 -1.8 h 4.95 L 12.6 4.05 z m -2.7 0 A 1.35 1.35 90 0 1 8.55 2.7 V 0.9 H 3.6 a 0.9 0.9 90 0 0 -0.9 0.9 v 10.8 a 0.9 0.9 90 0 0 0.9 0.9 h 7.2 a 0.9 0.9 90 0 0 0.9 -0.9 V 4.05 h -1.8 z M 7.2 5.85 a 0.45 0.45 90 0 1 0.45 0.45 v 1.35 H 9 a 0.45 0.45 90 0 1 0 0.9 H 7.65 V 9.9 a 0.45 0.45 90 0 1 -0.9 0 V 8.55 H 5.4 a 0.45 0.45 90 0 1 0 -0.9 h 1.35 V 6.3 a 0.45 0.45 90 0 1 0.45 -0.45 z">
+                          <HBox.margin>
+                            <Insets right="8.0" />
+                          </HBox.margin>
+                        </SVGPath>
+                        <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0"
+                          styleClass="font-medium" text="Sales" />
+                      </children>
+                    </HBox>
+                  </graphic>
+                  <padding>
+                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                  </padding>
+                  <cursor>
+                    <Cursor fx:constant="HAND" />
+                  </cursor>
+                </Button>
+              </children>
+              <VBox.margin>
+                <Insets bottom="8.0" />
+              </VBox.margin>
+            </HBox>
+            <HBox prefWidth="200.0">
+              <children>
+                <Button maxWidth="Infinity" mnemonicParsing="false" HBox.hgrow="ALWAYS">
+                  <graphic>
+                    <HBox>
+                      <children>
+                        <SVGPath
+                          content="M 4.95 8.1 a 0.45 0.45 90 0 1 0.45 -0.45 h 3.6 a 0.45 0.45 90 0 1 0 0.9 H 5.4 a 0.45 0.45 90 0 1 -0.45 -0.45 z M 12.6 4.05 V 12.6 a 1.8 1.8 90 0 1 -1.8 1.8 H 3.6 a 1.8 1.8 90 0 1 -1.8 -1.8 V 1.8 a 1.8 1.8 90 0 1 1.8 -1.8 h 4.95 L 12.6 4.05 z m -2.7 0 A 1.35 1.35 90 0 1 8.55 2.7 V 0.9 H 3.6 a 0.9 0.9 90 0 0 -0.9 0.9 v 10.8 a 0.9 0.9 90 0 0 0.9 0.9 h 7.2 a 0.9 0.9 90 0 0 0.9 -0.9 V 4.05 h -1.8 z">
+                          <HBox.margin>
+                            <Insets right="8.0" />
+                          </HBox.margin>
+                        </SVGPath>
+                        <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0"
+                          styleClass="font-medium" text="Returns" />
+                      </children>
+                    </HBox>
+                  </graphic>
+                  <padding>
+                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                  </padding>
+                  <cursor>
+                    <Cursor fx:constant="HAND" />
+                  </cursor>
+                </Button>
+              </children>
+            </HBox>
+          </children>
+          <HBox.margin>
+            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+          </HBox.margin>
+        </VBox>
+        <Separator orientation="VERTICAL" prefHeight="200.0" />
+      </children>
+    </HBox>
+  </left>
+</BorderPane>

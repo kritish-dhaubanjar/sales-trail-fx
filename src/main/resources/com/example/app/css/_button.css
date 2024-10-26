@@ -5,3 +5,7 @@
 .button:hover {
   -fx-background-color: #f4f4f5;
 }
+
+.btn-active {
+  -fx-background-color: #f4f4f5;
+}

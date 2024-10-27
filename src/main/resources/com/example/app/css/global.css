@@ -1,9 +1,3 @@
 @import './_font.css';
 @import './_button.css';
-
-.table-view .column-header,
-.table-view .column-header .filler,
-.table-view .column-header-background .filler {
-  -fx-background-color: #fff;
-  -fx-border-width: 0px;
-}
+@import './_table.css';

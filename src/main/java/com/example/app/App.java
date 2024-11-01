@@ -5,6 +5,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.fxml.FXMLLoader;
+
+import com.example.app.database.Database;
+
 import javafx.application.Application;
 
 /**
@@ -30,6 +33,7 @@ public class App extends Application {
   }
 
   public static void main(String[] args) {
+    Database.getConnection();
     launch();
   }
 

@@ -61,7 +61,7 @@
                 <Cursor fx:constant="HAND" />
               </cursor>
             </Button>
-            <Button layoutX="698.0" mnemonicParsing="false" prefWidth="68.0"
+            <Button onAction="#add" layoutX="698.0" mnemonicParsing="false" prefWidth="68.0"
               style="-fx-background-color: #18181be5; -fx-text-fill: #fff;">
               <padding>
                 <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />

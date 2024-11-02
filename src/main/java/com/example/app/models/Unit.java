@@ -57,8 +57,30 @@ public class Unit {
     return 0;
   }
 
+  public static void create(String name) {
+    String sql = String.format("INSERT INTO %s(name) VALUES('%s')", TABLE_NAME, name);
+
+    try {
+      Statement s = connection.createStatement();
+      s.executeUpdate(sql);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+
   public void delete() {
     String sql = String.format("DELETE FROM %s WHERE id = %s", TABLE_NAME, id);
+
+    try {
+      Statement s = connection.createStatement();
+      s.executeUpdate(sql);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+
+  public void save() {
+    String sql = String.format("UPDATE %s SET name = '%s' WHERE id = %s", TABLE_NAME, name, id);
 
     try {
       Statement s = connection.createStatement();
@@ -82,5 +104,9 @@ public class Unit {
 
   public String getName() {
     return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
   }
 }

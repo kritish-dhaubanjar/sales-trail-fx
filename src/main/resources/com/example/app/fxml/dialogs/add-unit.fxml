@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<DialogPane stylesheets="@../../css/_dialog.css" xmlns="http://javafx.com/javafx/23.0.1"
+  xmlns:fx="http://javafx.com/fxml/1">
+  <content>
+    <HBox alignment="CENTER" prefWidth="328.0" spacing="8.0">
+      <children>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Name">
+        </Text>
+        <TextField fx:id="unit" promptText="Pcs"
+          style="-fx-background-color: #fff; -fx-border-color: #e4e4e7; -fx-border-radius: 4px;">
+          <HBox.margin>
+            <Insets />
+          </HBox.margin>
+          <padding>
+            <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+          </padding>
+        </TextField>
+      </children>
+      <padding>
+        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+      </padding>
+    </HBox>
+  </content>
+  <header>
+    <VBox>
+      <children>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0"
+          style="-fx-font-family: 'Roboto Medium'; -fx-text-fill: #000; -fx-font-size: 16px;"
+          text="Add Unit">
+        </Text>
+        <Text fill="#71717a" strokeType="OUTSIDE" strokeWidth="0.0"
+          style="-fx-font-family: Roboto; -fx-text-fill: #71717a; -fx-font-size: 13px;"
+          text="Click save when you're done.">
+          <VBox.margin>
+            <Insets bottom="8.0" top="4.0" />
+          </VBox.margin>
+        </Text>
+      </children>
+      <padding>
+        <Insets left="8.0" right="8.0" top="8.0" />
+      </padding>
+    </VBox>
+  </header>
+  <padding>
+    <Insets left="8.0" top="8.0" />
+  </padding>
+</DialogPane>

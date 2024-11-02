@@ -1,12 +1,17 @@
 package com.example.app.controllers;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import javafx.event.Event;
 import javafx.scene.text.Text;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Dialog;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ButtonBar;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ContextMenu;
@@ -67,6 +72,7 @@ public class UnitController {
     MenuItem edit = new MenuItem("Edit", editIcon);
 
     delete.setOnAction(e -> setDelete(table.getSelectionModel().getSelectedItem()));
+    edit.setOnAction(e -> setEdit(table.getSelectionModel().getSelectedItem()));
 
     contextMenu.getItems().addAll(edit, delete);
 
@@ -151,6 +157,77 @@ public class UnitController {
 
     page--;
     setUnits();
+  }
+
+  public void setEdit(Unit unit) {
+    Dialog<ButtonType> dialog = new Dialog<>();
+
+    dialog.setResizable(false);
+    dialog.setTitle("Edit Unit");
+
+    try {
+      DialogPane dialogPane = FXMLLoader.load(getClass().getResource("/com/example/app/fxml/dialogs/add-unit.fxml"));
+      ButtonType OK = new ButtonType("Save", ButtonBar.ButtonData.FINISH);
+      dialogPane.getButtonTypes().addAll(ButtonType.CLOSE, OK);
+
+      Button button = (Button) dialogPane.lookupButton(OK);
+      TextField textField = (TextField) dialogPane.lookup("#unit");
+
+      textField.setText(unit.getName());
+      button.getStyleClass().add("btn-dark");
+
+      dialog.setDialogPane(dialogPane);
+
+      Platform.runLater(() -> textField.requestFocus());
+
+      Optional<ButtonType> ok = dialog.showAndWait();
+
+      if (ok.isPresent() && ok.get() == OK) {
+        String name = textField.getText();
+
+        if (name.length() > 0) {
+          unit.setName(name);
+          unit.save();
+          setUnits();
+        }
+      }
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+
+  public void add(Event event) {
+    Dialog<ButtonType> dialog = new Dialog<>();
+
+    dialog.setResizable(false);
+    dialog.setTitle("Add Unit");
+
+    try {
+      DialogPane dialogPane = FXMLLoader.load(getClass().getResource("/com/example/app/fxml/dialogs/add-unit.fxml"));
+      ButtonType OK = new ButtonType("Save", ButtonBar.ButtonData.FINISH);
+      dialogPane.getButtonTypes().addAll(ButtonType.CLOSE, OK);
+
+      Button button = (Button) dialogPane.lookupButton(OK);
+      TextField textField = (TextField) dialogPane.lookup("#unit");
+      button.getStyleClass().add("btn-dark");
+
+      dialog.setDialogPane(dialogPane);
+
+      Platform.runLater(() -> textField.requestFocus());
+
+      Optional<ButtonType> ok = dialog.showAndWait();
+
+      if (ok.isPresent() && ok.get() == OK) {
+        String name = textField.getText();
+
+        if (name.length() > 0) {
+          Unit.create(name);
+          setUnits();
+        }
+      }
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
   }
 
   private void setDelete(Unit unit) {

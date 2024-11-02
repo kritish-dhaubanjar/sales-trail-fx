@@ -1,0 +1,33 @@
+@import './_font.css';
+@import './_button.css';
+
+.dialog-pane {
+  -fx-background-color: #fff;
+}
+
+.dialog-pane .button {
+  -fx-cursor: hand;
+  -fx-background-color: #ffffff;
+  -fx-border-width: 1px;
+  -fx-border-color: #e4e4e7;
+  -fx-border-radius: 4px;
+  -fx-font-family: "Roboto Medium";
+}
+
+.dialog-pane .button:hover {
+  -fx-cursor: hand;
+  -fx-background-color: #f4f4f5;
+}
+
+.btn-dark {
+  -fx-cursor: hand;
+  -fx-border-radius: 4px;
+  -fx-font-family: "Roboto Medium";
+  -fx-background-color: #18181be5 !important;
+  -fx-text-fill: #fff !important;
+  -fx-border-color: #18181be5 !important;
+}
+
+.btn-dark:hover {
+  -fx-background-color: #18181bfd;
+}

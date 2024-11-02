@@ -9,3 +9,16 @@
 .btn-active {
   -fx-background-color: #f4f4f5;
 }
+
+.btn-dark {
+  -fx-cursor: hand;
+  -fx-border-radius: 4px;
+  -fx-font-family: "Roboto Medium";
+  -fx-background-color: #18181be5 !important;
+  -fx-text-fill: #fff !important;
+  -fx-border-color: #18181be5 !important;
+}
+
+.btn-dark:hover {
+  -fx-background-color: #18181bfd;
+}

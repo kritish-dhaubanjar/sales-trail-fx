@@ -1,8 +1,79 @@
-.table-view .column-header,
-.table-view .column-header .filler,
-.table-view .corner,
-.table-view .column-header-background,
-.table-view .column-header-background .filler {
-  -fx-background-color: #fff;
-  -fx-border-width: 0px;
+.table-view {
+  -fx-background-color: transparent;
+  -fx-border-width: 1px;
+  -fx-border-color: #e4e4e7;
+  -fx-border-radius: 8px;
+  -fx-background-radius: 8px;
+}
+
+.table-view:focused {
+  -fx-background-color: -fx-box-border, -fx-control-inner-background;
+  -fx-background-insets: 0, 1;
+}
+
+.table-view .column-header {
+  -fx-background-color: transparent;
+}
+
+.corner {
+  -fx-background-color: transparent;
+}
+
+.column-header-background {
+  -fx-background-color: transparent;
+  -fx-border-color: #e4e4e7;
+  -fx-border-width: 0 0 1 0;
+}
+
+.column-header-background .filler {
+  -fx-background-color: transparent;
+}
+
+.column-header .label {
+  -fx-padding: 8px 8px;
+  -fx-text-fill: #71717a;
+  -fx-alignment: center-left;
+}
+
+* {
+  -fx-primary-color: #007acc;
+  -fx-secondary-color: #4B6EAF;
+  -fx-accent-color: #B6FF00;
+  -fx-grey-color: #b9b9b9;
+  -fx-light-grey-color: #d1d1d1;
+  -fx-lightest-grey-color: #F9F9FB;
+  -fx-focus-color: -fx-secondary-color;
+}
+
+.table-row-cell:filled:selected .table-cell {
+  -fx-text-fill: black;
+}
+
+.cell,
+.cell:filled {
+  -fx-cell-size: 30;
+  -fx-alignment: center-left;
+}
+
+.table-row-cell:filled:selected:hover {
+  -fx-background-color: #d1d1d1;
+}
+
+.table-row-cell:empty {
+  -fx-background-color: transparent;
+}
+
+.table-row-cell:filled:hover {
+  -fx-background-color: #d1d1d1
+}
+
+.table-row-cell:filled:selected {
+  -fx-background-color: #d1d1d1;
+  -fx-background-insets: 0.0;
+  -fx-background-radius: 0.0;
+}
+
+.table-cell {
+  -fx-border-width: 0;
+  -fx-padding: 0 0 0 8px;
 }

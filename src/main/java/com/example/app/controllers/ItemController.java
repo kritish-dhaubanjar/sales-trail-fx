@@ -55,6 +55,8 @@ public class ItemController {
 
     combobox.setValue(String.valueOf(limit));
 
+    textfield.setText(query);
+
     textfield.textProperty().addListener((observable, oldValue, newValue) -> {
       setQuery(newValue);
     });

@@ -14,3 +14,7 @@ mvn archetype:generate \
 ```shell
 mvn clean javafx:run
 ```
+
+### Resources
+- https://reactsvgicons.com/search?q=chevron
+- https://yqnn.github.io/svg-path-editor

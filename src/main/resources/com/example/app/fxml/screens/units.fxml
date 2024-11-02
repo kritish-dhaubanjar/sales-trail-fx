@@ -102,8 +102,23 @@
                 <Insets right="16.0" />
               </HBox.margin>
             </Text>
-            <Button onAction="#previous" maxHeight="-Infinity" maxWidth="-Infinity"
-              minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0"
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" mnemonicParsing="false" onAction="#previous" prefHeight="26.0"
+              prefWidth="26.0"
+              style="-fx-opacity: 0.5; -fx-border-color: #e4e4e7; -fx-border-width: 1px; -fx-border-radius: 4px;">
+              <graphic>
+                <SVGPath
+                  content="M8.354 1.646a.5.5 0 010 .708L2.707 8l5.647 5.646a.5.5 0 01-.708.708l-6-6a.5.5 0 010-.708l6-6a.5.5 0 01.708 0zM12.354 1.646a.5.5 0 010 .708L6.707 8l5.647 5.646a.5.5 0 01-.708.708l-6-6a.5.5 0 010-.708l6-6a.5.5 0 01.708 0z" />
+              </graphic>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <HBox.margin>
+                <Insets right="4.0" />
+              </HBox.margin>
+            </Button>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" mnemonicParsing="false" onAction="#previous" prefHeight="26.0"
               prefWidth="26.0"
               style="-fx-opacity: 0.5; -fx-border-color: #e4e4e7; -fx-border-width: 1px; -fx-border-radius: 4px;">
               <graphic>
@@ -117,13 +132,28 @@
                 <Cursor fx:constant="HAND" />
               </cursor>
             </Button>
-            <Button onAction="#next" maxHeight="-Infinity" maxWidth="-Infinity"
-              minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0"
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" mnemonicParsing="false" onAction="#next" prefHeight="26.0"
               prefWidth="26.0"
               style="-fx-opacity: 0.5; -fx-border-color: #e4e4e7; -fx-border-width: 1px; -fx-border-radius: 4px;">
               <graphic>
                 <SVGPath
                   content="M10.586 6.343L12 4.93 19.071 12 12 19.071l-1.414-1.414L16.243 12l-5.657-5.657z" />
+              </graphic>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+              <HBox.margin>
+                <Insets right="4.0" />
+              </HBox.margin>
+            </Button>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" mnemonicParsing="false" onAction="#next" prefHeight="26.0"
+              prefWidth="26.0"
+              style="-fx-opacity: 0.5; -fx-border-color: #e4e4e7; -fx-border-width: 1px; -fx-border-radius: 4px;">
+              <graphic>
+                <SVGPath
+                  content="M3.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L9.293 8 3.646 2.354a.5.5 0 010-.708z M7.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L13.293 8 7.646 2.354a.5.5 0 010-.708z" />
               </graphic>
               <cursor>
                 <Cursor fx:constant="HAND" />

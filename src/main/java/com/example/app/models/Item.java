@@ -16,16 +16,23 @@ public class Item {
   private Double rate;
   private String description;
 
-  public Item(int id, String name, String description, Double rate) {
+  private int unit_id;
+  private String unitName;
+
+  public Item(int id, String name, String description, Double rate, int unit_id, String unit_name) {
     this.id = id;
     this.name = name;
     this.rate = rate;
+    this.unitName = unit_name;
+    this.unit_id = unit_id;
     this.description = description;
   }
 
   public static ArrayList<Item> all(int page, int limit, String q) {
     int offset = (page - 1) * limit;
-    String sql = String.format("SELECT * FROM %s WHERE name LIKE '%%%s%%' LIMIT %s OFFSET %s", TABLE_NAME, q, limit,
+    String sql = String.format(
+        "SELECT t1.id, t1.name, t1.description, t1.price, t2.id as unit_id, t2.name as unit_name FROM %s as t1 INNER JOIN %s as t2 ON %s WHERE t1.name LIKE '%%%s%%' LIMIT %s OFFSET %s",
+        TABLE_NAME, Unit.TABLE_NAME, "t1.unit_id = t2.id", q, limit,
         offset);
 
     ArrayList<Item> response = new ArrayList<>();
@@ -35,7 +42,8 @@ public class Item {
       ResultSet r = s.executeQuery(sql);
 
       while (r.next()) {
-        response.add(new Item(r.getInt("id"), r.getString("name"), r.getString("description"), r.getDouble("price")));
+        response.add(new Item(r.getInt("id"), r.getString("name"), r.getString("description"), r.getDouble("price"),
+            r.getInt("unit_id"), r.getString("unit_name")));
       }
     } catch (Exception e) {
       e.printStackTrace();
@@ -75,5 +83,9 @@ public class Item {
 
   public Double getRate() {
     return rate;
+  }
+
+  public String getUnitName() {
+    return unitName;
   }
 }

@@ -25,7 +25,7 @@ public class ItemController {
   TableColumn<Item, Double> rate;
 
   @FXML
-  TableColumn<Item, String> name, description;
+  TableColumn<Item, String> name, description, unit;
 
   @FXML
   ComboBox<String> combobox;
@@ -49,6 +49,7 @@ public class ItemController {
 
     id.setCellValueFactory(new PropertyValueFactory<>("id"));
     name.setCellValueFactory(new PropertyValueFactory<>("name"));
+    unit.setCellValueFactory(new PropertyValueFactory<>("unitName"));
     rate.setCellValueFactory(new PropertyValueFactory<>("rate"));
     description.setCellValueFactory(new PropertyValueFactory<>("description"));
 

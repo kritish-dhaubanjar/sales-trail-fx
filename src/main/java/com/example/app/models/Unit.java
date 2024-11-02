@@ -57,6 +57,25 @@ public class Unit {
     return 0;
   }
 
+  public void delete() {
+    String sql = String.format("DELETE FROM %s WHERE id = %s", TABLE_NAME, id);
+
+    try {
+      Statement s = connection.createStatement();
+      s.executeUpdate(sql);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+
+  public ArrayList<Item> items() {
+    ArrayList<Item> items = Item.all(1, 10_00_000, "");
+
+    items.removeIf((e) -> e.getUnitId() != id);
+
+    return items;
+  }
+
   public int getId() {
     return id;
   }

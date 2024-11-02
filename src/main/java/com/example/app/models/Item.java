@@ -88,4 +88,8 @@ public class Item {
   public String getUnitName() {
     return unitName;
   }
+
+  public int getUnitId() {
+    return unit_id;
+  }
 }

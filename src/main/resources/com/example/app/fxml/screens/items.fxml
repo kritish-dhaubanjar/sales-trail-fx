@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane
+  stylesheets="@../../css/global.css"
+  xmlns="http://javafx.com/javafx/23.0.1"
+  xmlns:fx="http://javafx.com/fxml/1">
+  <top>
+    <VBox BorderPane.alignment="CENTER">
+      <children>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="font-medium" text="Items (17)">
+          <font>
+            <Font size="24.0" />
+          </font>
+          <VBox.margin>
+            <Insets bottom="4.0" />
+          </VBox.margin>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: 0.6;"
+          text="Use the filter input to quickly search and display specific units by name, status, or other relevant criteria." />
+      </children>
+      <BorderPane.margin>
+        <Insets bottom="32.0" />
+      </BorderPane.margin>
+    </VBox>
+  </top>
+  <center>
+    <VBox BorderPane.alignment="CENTER">
+      <children>
+        <AnchorPane prefHeight="52.0" prefWidth="760.0">
+          <children>
+            <TextField minWidth="200.0" promptText="Filter Items"
+              style="-fx-background-color: #fff; -fx-border-color: #e4e4e7; -fx-border-radius: 4px;">
+              <padding>
+                <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+              </padding>
+            </TextField>
+            <Button layoutX="172.0" layoutY="1.0" mnemonicParsing="false" prefHeight="26.0"
+              prefWidth="27.0" textFill="#18181b">
+              <graphic>
+                <SVGPath
+                  content="M 9.387 8.4 l 3.01 -3.003 a 0.7 0.7 90 1 0 -0.994 -0.994 L 8.4 7.413 l -3.003 -3.01 a 0.7 0.7 90 0 0 -0.994 0.994 l 3.01 3.003 l -3.01 3.003 a 0.7 0.7 90 0 0 0 0.994 a 0.7 0.7 90 0 0 0.994 0 l 3.003 -3.01 l 3.003 3.01 a 0.7 0.7 90 0 0 0.994 0 a 0.7 0.7 90 0 0 0 -0.994 z"
+                  fill="#18181b" />
+              </graphic>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+            </Button>
+          </children>
+        </AnchorPane>
+        <TableView
+          style="-fx-background-color: #ffffff; -fx-border-color: #e4e4e7; -fx-border-radius: 4px; -fx-border-width: 1px;">
+          <columns>
+            <TableColumn prefWidth="75.0" text="ID" />
+            <TableColumn prefWidth="75.0" text="Name" />
+          </columns>
+        </TableView>
+        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+          <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rows per page">
+              <HBox.margin>
+                <Insets right="8.0" />
+              </HBox.margin>
+            </Text>
+            <ComboBox prefWidth="150.0"
+              style="-fx-background-color: #fff; -fx-border-color: #e4e4e7; -fx-border-radius: 4px;">
+              <HBox.margin>
+                <Insets right="16.0" />
+              </HBox.margin>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+            </ComboBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Page 1 of 1">
+              <HBox.margin>
+                <Insets right="16.0" />
+              </HBox.margin>
+            </Text>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="26.0"
+              style="-fx-opacity: 0.5; -fx-border-color: #e4e4e7; -fx-border-width: 1px; -fx-border-radius: 4px;">
+              <graphic>
+                <SVGPath
+                  content="M16.243 6.343L14.828 4.93 7.758 12l7.07 7.071 1.415-1.414L10.586 12l5.657-5.657z" />
+              </graphic>
+              <HBox.margin>
+                <Insets right="8.0" />
+              </HBox.margin>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+            </Button>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="26.0"
+              style="-fx-opacity: 0.5; -fx-border-color: #e4e4e7; -fx-border-width: 1px; -fx-border-radius: 4px;">
+              <graphic>
+                <SVGPath
+                  content="M10.586 6.343L12 4.93 19.071 12 12 19.071l-1.414-1.414L16.243 12l-5.657-5.657z" />
+              </graphic>
+              <cursor>
+                <Cursor fx:constant="HAND" />
+              </cursor>
+            </Button>
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </center>
+  <padding>
+    <Insets bottom="32.0" left="32.0" right="32.0" top="32.0" />
+  </padding>
+</BorderPane>

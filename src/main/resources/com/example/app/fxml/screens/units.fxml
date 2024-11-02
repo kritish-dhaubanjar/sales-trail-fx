@@ -11,7 +11,10 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.SVGPath?>
 <?import javafx.scene.text.Font?>
@@ -42,35 +45,50 @@
   <center>
     <VBox BorderPane.alignment="CENTER">
       <children>
-        <AnchorPane prefHeight="52.0" prefWidth="760.0">
+        <GridPane>
+          <VBox.margin>
+            <Insets bottom="24.0" />
+          </VBox.margin>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+          </rowConstraints>
           <children>
-            <TextField fx:id="textfield" minWidth="200.0" promptText="Filter Units"
-              style="-fx-background-color: #fff; -fx-border-color: #e4e4e7; -fx-border-radius: 4px;">
+            <AnchorPane>
+              <children>
+                <TextField fx:id="textfield" minWidth="200.0" promptText="Filter Units"
+                  style="-fx-background-color: #fff; -fx-border-color: #e4e4e7; -fx-border-radius: 4px;">
+                  <padding>
+                    <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                  </padding>
+                </TextField>
+                <Button layoutX="172.0" layoutY="1.0" mnemonicParsing="false" onAction="#clear"
+                  prefHeight="26.0" prefWidth="27.0" textFill="#18181b">
+                  <graphic>
+                    <SVGPath
+                      content="M 9.387 8.4 l 3.01 -3.003 a 0.7 0.7 90 1 0 -0.994 -0.994 L 8.4 7.413 l -3.003 -3.01 a 0.7 0.7 90 0 0 -0.994 0.994 l 3.01 3.003 l -3.01 3.003 a 0.7 0.7 90 0 0 0 0.994 a 0.7 0.7 90 0 0 0.994 0 l 3.003 -3.01 l 3.003 3.01 a 0.7 0.7 90 0 0 0.994 0 a 0.7 0.7 90 0 0 0 -0.994 z"
+                      fill="#18181b" />
+                  </graphic>
+                  <cursor>
+                    <Cursor fx:constant="HAND" />
+                  </cursor>
+                </Button>
+              </children>
+            </AnchorPane>
+            <Button mnemonicParsing="false" onAction="#add" prefWidth="68.0"
+              style="-fx-background-color: #18181be5; -fx-text-fill: #fff;" GridPane.columnIndex="1"
+              GridPane.halignment="RIGHT">
               <padding>
                 <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
               </padding>
-            </TextField>
-            <Button layoutX="172.0" layoutY="1.0" mnemonicParsing="false" onAction="#clear"
-              prefHeight="26.0" prefWidth="27.0" textFill="#18181b">
-              <graphic>
-                <SVGPath
-                  content="M 9.387 8.4 l 3.01 -3.003 a 0.7 0.7 90 1 0 -0.994 -0.994 L 8.4 7.413 l -3.003 -3.01 a 0.7 0.7 90 0 0 -0.994 0.994 l 3.01 3.003 l -3.01 3.003 a 0.7 0.7 90 0 0 0 0.994 a 0.7 0.7 90 0 0 0.994 0 l 3.003 -3.01 l 3.003 3.01 a 0.7 0.7 90 0 0 0.994 0 a 0.7 0.7 90 0 0 0 -0.994 z"
-                  fill="#18181b" />
-              </graphic>
-              <cursor>
-                <Cursor fx:constant="HAND" />
-              </cursor>
-            </Button>
-            <Button onAction="#add" layoutX="698.0" mnemonicParsing="false" prefWidth="68.0"
-              style="-fx-background-color: #18181be5; -fx-text-fill: #fff;">
-              <padding>
-                <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
-              </padding>
               <cursor>
                 <Cursor fx:constant="HAND" />
               </cursor>
               <graphic>
-                <HBox alignment="CENTER">
+                <HBox alignment="CENTER" layoutX="100.0">
                   <children>
                     <SVGPath
                       content="M 4.9 4.9 V 0.7 h 0.7 v 4.2 h 4.2 v 0.7 H 5.6 v 4.2 H 4.9 V 5.6 H 0.7 V 4.9 h 4.2 z"
@@ -88,7 +106,7 @@
               </graphic>
             </Button>
           </children>
-        </AnchorPane>
+        </GridPane>
         <VBox VBox.vgrow="ALWAYS">
           <children>
             <TableView fx:id="table" VBox.vgrow="ALWAYS">
